@@ -6,9 +6,8 @@ WORKDIR /app
 
 RUN npm install nodemon -g
 
-
 # Install app dependencies
-COPY package*.json ./
+COPY . .
 
 RUN npm install
 # If you are building your code for production
@@ -16,6 +15,8 @@ RUN npm install
 
 # Bundle app source
 COPY . .
+
+RUN npm build
 
 EXPOSE 3001
 CMD node routes/index.js
