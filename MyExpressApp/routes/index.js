@@ -4,7 +4,7 @@ var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 var app = express();
 var assert = require('assert');
-var url = 'mongodb://mongo:27017';
+var url = 'mongodb://mongo:27017/juegos';
 var redis = require("redis");
 var cache = require('express-redis-cache')({
   host: 'redis', port: 6379
