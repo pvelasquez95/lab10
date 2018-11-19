@@ -16,7 +16,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-RUN npm build
 
 EXPOSE 3001
 CMD node routes/index.js
